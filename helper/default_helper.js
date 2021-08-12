@@ -9,7 +9,15 @@ var helper = {
        error:{},
        data:{},
        global_error:""     
-    }
+    },
+     array_column:function(array, columnName) {
+
+        var temp = [];
+        array.forEach(function(element) {
+          temp.push(element[columnName]);
+        })
+        return temp
+    },
 }
 
 module.exports = helper
